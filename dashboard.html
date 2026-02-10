@@ -3,104 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min profil – Min Saga</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard – Min Saga</title>
+    <link rel="stylesheet" href="dashboard-new.css">
 </head>
-<body class="dashboard-body">
-    <header class="dashboard-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Min Saga</div>
-                <div class="user-menu">
-                    <span class="user-name" id="userName"></span>
-                    <button class="logout-btn" onclick="logout()">Logg ut</button>
+<body>
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="logo">✨ Min Saga</div>
+        <div class="user-section">
+            <div class="user-info">
+                <div class="avatar">👤</div>
+                <div class="user-text">
+                    <div class="user-name" id="userName">Bruker</div>
+                    <div class="user-subtitle">Din digitale arv</div>
                 </div>
             </div>
+            <button class="logout-btn" onclick="logout()">Logg ut</button>
         </div>
     </header>
 
-    <div class="dashboard-container">
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar - Categories -->
         <aside class="sidebar">
-            <nav class="sidebar-nav">
-                <h3>Oversikt</h3>
-                <a href="#" class="nav-item special" data-section="min-saga">
-                    <span class="nav-icon">✨</span>
-                    <span>Min Saga</span>
-                </a>
-                <a href="#" class="nav-item" data-section="min-bruker">
-                    <span class="nav-icon">👤</span>
-                    <span>Min bruker</span>
-                </a>
+            <div class="sidebar-title">
+                <h2>Kategorier</h2>
+                <p>Klikk for å åpne</p>
+            </div>
 
-                <h3>Praktisk</h3>
-                <a href="#" class="nav-item" data-section="kontakter">
-                    <span class="nav-icon">👥</span>
-                    <span>Kontakter</span>
-                </a>
-                <a href="#" class="nav-item" data-section="abonnementer">
-                    <span class="nav-icon">📱</span>
-                    <span>Abonnementer</span>
-                </a>
-                <a href="#" class="nav-item" data-section="krypto">
-                    <span class="nav-icon">₿</span>
-                    <span>Kryptovaluta</span>
-                </a>
-                <a href="#" class="nav-item" data-section="forsikringer">
-                    <span class="nav-icon">🛡️</span>
-                    <span>Forsikringer</span>
-                </a>
-                <a href="#" class="nav-item" data-section="bank">
-                    <span class="nav-icon">🏦</span>
-                    <span>Bank & økonomi</span>
-                </a>
-                <a href="#" class="nav-item" data-section="eiendommer">
-                    <span class="nav-icon">🏠</span>
-                    <span>Eiendommer</span>
-                </a>
-                <a href="#" class="nav-item" data-section="kjoretoy">
-                    <span class="nav-icon">🚗</span>
-                    <span>Kjøretøy</span>
-                </a>
-                <a href="#" class="nav-item" data-section="digitalt">
-                    <span class="nav-icon">💻</span>
-                    <span>Digitalt liv</span>
-                </a>
-                <a href="#" class="nav-item" data-section="dokumenter">
-                    <span class="nav-icon">📄</span>
-                    <span>Dokumenter</span>
-                </a>
+            <nav class="category-list">
+                <!-- Overview -->
+                <div class="category-group">
+                    <div class="group-title">OVERSIKT</div>
+                    <a href="#" class="category-item active" data-cat="oversikt">
+                        <span class="icon">✨</span>
+                        <span class="name">Min Saga</span>
+                        <span class="arrow">›</span>
+                    </a>
+                </div>
 
-                <h3>Personlig</h3>
-                <a href="#" class="nav-item special" data-section="minner">
-                    <span class="nav-icon">💝</span>
-                    <span>Minner & Saga</span>
-                </a>
-                <a href="#" class="nav-item special" data-section="livsmanual">
-                    <span class="nav-icon">📖</span>
-                    <span>Livsmanualen</span>
-                </a>
-                <a href="#" class="nav-item special" data-section="etterlatte">
-                    <span class="nav-icon">🔐</span>
-                    <span>Etterlatteprofiler</span>
-                </a>
+                <!-- Practical -->
+                <div class="category-group">
+                    <div class="group-title">PRAKTISK</div>
+                    <a href="#" class="category-item" data-cat="kontakter">
+                        <span class="icon">👥</span>
+                        <span class="name">Kontakter</span>
+                        <span class="count" id="cnt-kontakter">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="abonnementer">
+                        <span class="icon">📱</span>
+                        <span class="name">Abonnementer</span>
+                        <span class="count" id="cnt-abonnementer">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="krypto">
+                        <span class="icon">₿</span>
+                        <span class="name">Kryptovaluta</span>
+                        <span class="count" id="cnt-krypto">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="forsikringer">
+                        <span class="icon">🛡️</span>
+                        <span class="name">Forsikringer</span>
+                        <span class="count" id="cnt-forsikringer">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="bank">
+                        <span class="icon">🏦</span>
+                        <span class="name">Bank & økonomi</span>
+                        <span class="count" id="cnt-bank">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="eiendommer">
+                        <span class="icon">🏠</span>
+                        <span class="name">Eiendommer</span>
+                        <span class="count" id="cnt-eiendommer">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="kjoretoy">
+                        <span class="icon">🚗</span>
+                        <span class="name">Kjøretøy</span>
+                        <span class="count" id="cnt-kjoretoy">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="digitalt">
+                        <span class="icon">💻</span>
+                        <span class="name">Digitalt liv</span>
+                        <span class="count" id="cnt-digitalt">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="dokumenter">
+                        <span class="icon">📄</span>
+                        <span class="name">Dokumenter</span>
+                        <span class="count" id="cnt-dokumenter">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                </div>
 
-                <h3>Sikkerhet</h3>
-                <a href="#" class="nav-item" data-section="aktivering">
-                    <span class="nav-icon">⏳</span>
-                    <span>Aktivering</span>
-                </a>
+                <!-- Personal -->
+                <div class="category-group">
+                    <div class="group-title">PERSONLIG</div>
+                    <a href="#" class="category-item special" data-cat="minner">
+                        <span class="icon">💝</span>
+                        <span class="name">Minner & Saga</span>
+                        <span class="count" id="cnt-minner">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item special" data-cat="livsmanual">
+                        <span class="icon">📖</span>
+                        <span class="name">Livsmanualen</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item special" data-cat="etterlatte">
+                        <span class="icon">🔐</span>
+                        <span class="name">Etterlatteprofiler</span>
+                        <span class="count" id="cnt-etterlatte">0</span>
+                        <span class="arrow">›</span>
+                    </a>
+                </div>
+
+                <!-- Settings -->
+                <div class="category-group">
+                    <div class="group-title">INNSTILLINGER</div>
+                    <a href="#" class="category-item" data-cat="aktivering">
+                        <span class="icon">⏳</span>
+                        <span class="name">Aktivering</span>
+                        <span class="arrow">›</span>
+                    </a>
+                    <a href="#" class="category-item" data-cat="bruker">
+                        <span class="icon">👤</span>
+                        <span class="name">Min bruker</span>
+                        <span class="arrow">›</span>
+                    </a>
+                </div>
             </nav>
         </aside>
 
-        <main class="main-content" id="mainContent">
-            <!-- Content loaded dynamically -->
+        <!-- Main Content -->
+        <main class="content" id="mainContent">
+            <!-- Dynamic content loads here -->
         </main>
     </div>
 
     <script src="auth.js"></script>
     <script src="storage.js"></script>
-    <script src="dashboard.js"></script>
-    <script src="dashboard-special.js"></script>
+    <script src="app.js"></script>
+    <script src="app-categories.js"></script>
 </body>
 </html>
