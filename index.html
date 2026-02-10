@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Saga – Ta kontroll, gi trygghet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Min Saga</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#funksjoner">Funksjoner</a></li>
+                        <li><a href="#hvordan">Hvordan det virker</a></li>
+                        <li><a href="#priser">Priser</a></li>
+                    </ul>
+                </nav>
+                <button class="cta-button" onclick="showAuthModal('login')">Logg inn</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ta kontroll over ditt digitale ettermæle</h1>
+            <p class="subtitle">Gi dine kjære trygghet når dagen kommer</p>
+            <p class="description">
+                Et enkelt og verdig sted å samle alt som betyr noe – fra praktisk informasjon 
+                til personlige minner. Slik at de du er glad i slipper å lete.
+            </p>
+            <button class="cta-button hero-cta" onclick="showAuthModal('register')">Start din saga</button>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- All Categories Showcase -->
+    <section id="funksjoner" class="categories-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Alle kategorier</h2>
+                <p>Organiser livet ditt i enkle, oversiktlige kategorier</p>
+            </div>
+
+            <div class="categories-full-grid">
+                <div class="category-showcase-card">
+                    <span class="icon">👥</span>
+                    <h3>Kontakter</h3>
+                    <p>Advokat, lege, regnskapsfører, familie og venner</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">📱</span>
+                    <h3>Abonnementer</h3>
+                    <p>Alle tjenester, medlemskap og abonnementer</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">₿</span>
+                    <h3>Kryptovaluta</h3>
+                    <p>Wallets, seed phrases og digitale verdier</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">🛡️</span>
+                    <h3>Forsikringer</h3>
+                    <p>Liv, helse, hus, bil og innbo</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">🏦</span>
+                    <h3>Bank & økonomi</h3>
+                    <p>Kontoer, lån, investeringer og verdipapirer</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">🏠</span>
+                    <h3>Eiendommer</h3>
+                    <p>Hus, hytte, tomt og utleie</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">🚗</span>
+                    <h3>Kjøretøy</h3>
+                    <p>Bil, båt, MC og dokumentasjon</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">💻</span>
+                    <h3>Digitalt liv</h3>
+                    <p>Passord, kontoer og digital tilstedeværelse</p>
+                </div>
+                <div class="category-showcase-card">
+                    <span class="icon">📄</span>
+                    <h3>Dokumenter</h3>
+                    <p>Testament, fullmakter og viktige papirer</p>
+                </div>
+                <div class="category-showcase-card special">
+                    <span class="icon">💝</span>
+                    <h3>Minner & Saga</h3>
+                    <p>Bilder, videoer og personlige budskap</p>
+                </div>
+                <div class="category-showcase-card special">
+                    <span class="icon">📖</span>
+                    <h3>Livsmanualen</h3>
+                    <p>Praktisk hverdagsinformasjon</p>
+                </div>
+                <div class="category-showcase-card special">
+                    <span class="icon">🔐</span>
+                    <h3>Etterlatteprofiler</h3>
+                    <p>Hvem får tilgang til hva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Encryption & Security Section -->
+    <section class="encryption-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🔐 Ende-til-ende kryptering</h2>
+                <p>Din saga er beskyttet med militær-grade sikkerhet</p>
+            </div>
+
+            <div class="encryption-grid">
+                <div class="encryption-card">
+                    <div class="encryption-icon">🛡️</div>
+                    <h3>Kryptert på din enhet</h3>
+                    <p>Alt du lagrer i Min Saga krypteres <strong>før</strong> det forlater enheten din. Vi kan ikke lese innholdet ditt.</p>
+                </div>
+                <div class="encryption-card">
+                    <div class="encryption-icon">🔑</div>
+                    <h3>Bitwarden-beskyttet</h3>
+                    <p>Nøklene som beskytter dokumentene dine er lagret i et digitalt hvelv (Bitwarden), slik at bare de du har valgt får tilgang.</p>
+                </div>
+                <div class="encryption-card">
+                    <div class="encryption-icon">🚫</div>
+                    <h3>Zero-knowledge</h3>
+                    <p>Vi har aldri tilgang til arven din. Verken vi eller driftspersonell kan se, endre eller dele dokumentene dine.</p>
+                </div>
+            </div>
+
+            <div class="security-details">
+                <h3>Hvordan det fungerer:</h3>
+                <ol>
+                    <li><strong>Kryptering på klienten:</strong> All data krypteres i nettleseren din før sending</li>
+                    <li><strong>Nøkler i Bitwarden:</strong> Krypteringsnøklene lagres aldri på våre servere</li>
+                    <li><strong>Sikker tilgang:</strong> Etterlatte får tilgang basert på forhåndsdefinerte regler</li>
+                    <li><strong>Fullstendig kontroll:</strong> Bare du og de du gir tilgang kan lese innholdet</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Pricing -->
+    <section id="priser" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enkle priser</h2>
+                <p>Velg det som passer deg best</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Månedlig</h4>
+                    <div class="price">49,- <span>/måned</span></div>
+                    <ul>
+                        <li>Full tilgang</li>
+                        <li>Ubegrenset lagring</li>
+                        <li>Alle kategorier</li>
+                    </ul>
+                    <button class="pricing-button" onclick="showAuthModal('register')">Velg</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h4>Årlig</h4>
+                    <div class="price">499,- <span>/år</span></div>
+                    <ul>
+                        <li>Full tilgang</li>
+                        <li>Ubegrenset lagring</li>
+                        <li>Prioritert support</li>
+                    </ul>
+                    <button class="pricing-button" onclick="showAuthModal('register')">Velg</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>Livstid</h4>
+                    <div class="price">2 399,- <span>engang</span></div>
+                    <ul>
+                        <li>Full tilgang for alltid</li>
+                        <li>Alle fremtidige funksjoner</li>
+                        <li>Premium support</li>
+                    </ul>
+                    <button class="pricing-button" onclick="showAuthModal('register')">Velg</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ofte stilte spørsmål</h2>
+                <p>Alt du trenger å vite om sikkerhet og personvern</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kan Min Saga lese innholdet mitt?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Nei.</strong> Innholdet krypteres før det lagres, og vi har ikke nøklene som trengs for å lese det. All kryptering skjer på din enhet før dataene sendes til våre servere.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hva skjer hvis dere får et datainnbrudd?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Eventuelle data vil være kryptert og uleselige uten krypteringsnøkler. Siden nøklene er lagret i Bitwarden og aldri på våre servere, vil dataene være verdiløse for uvedkommende.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Er dette i tråd med GDPR?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Ja.</strong> Løsningen er bygget med innebygd personvern og dataminimering som grunnprinsipp. Du har full kontroll over dine data og kan slette alt når som helst.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hvordan får etterlatte tilgang?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tilgang gis basert på regler du definerer: manglende livstegn (inaktivitet), bekreftelse fra 2 av 3 varslingskontakter, eller via betrodd pårørende. Prosessen er automatisk og sikker.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hvor lagres dokumentene mine?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dokumenter lagres kryptert i vår infrastruktur, men krypteres med nøkler som kun Bitwarden kontrollerer. I praksis er dokumentene beskyttet av Bitwarden's sikkerhetssystemer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kan jeg endre hvem som får tilgang?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, du kan når som helst oppdatere etterlatteprofiler, endre tilganger og justere aktiveringsmekanismer. Du har full kontroll.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hva koster det?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vi tilbyr tre planer: 49,- /måned, 499,- /år (spar 2 måneder), eller 2 399,- for livstidstilgang. Alle planer inkluderer full funksjonalitet og ubegrenset lagring.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Er dataene mine trygge?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja. Vi bruker ende-til-ende kryptering, zero-knowledge arkitektur, og Bitwarden for nøkkelhåndtering. Dataene dine er beskyttet med samme sikkerhetsnivå som banker bruker.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">Min Saga</div>
+            <p>Et trygt sted for det som betyr mest</p>
+            <p style="margin-top: 2rem;">© 2026 Min Saga. Utviklet med omsorg i Norge 🇳🇴</p>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            
+            <!-- Login Form -->
+            <div id="loginForm" class="auth-form">
+                <h2>Logg inn</h2>
+                <p class="auth-subtitle">Velkommen tilbake til din saga</p>
+                
+                <input type="email" id="loginEmail" placeholder="E-post" required>
+                <input type="password" id="loginPassword" placeholder="Passord" required>
+                
+                <button class="auth-button" onclick="login()">Logg inn</button>
+                
+                <p class="auth-switch">
+                    Har du ikke konto? 
+                    <a href="#" onclick="switchAuthMode('register')">Registrer deg her</a>
+                </p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerForm" class="auth-form" style="display: none;">
+                <h2>Opprett konto</h2>
+                <p class="auth-subtitle">Start din digitale saga i dag</p>
+                
+                <input type="text" id="registerName" placeholder="Fullt navn" required>
+                <input type="email" id="registerEmail" placeholder="E-post" required>
+                <input type="password" id="registerPassword" placeholder="Passord (min 6 tegn)" required>
+                <input type="password" id="registerPasswordConfirm" placeholder="Bekreft passord" required>
+                
+                <button class="auth-button" onclick="register()">Opprett konto</button>
+                
+                <p class="auth-switch">
+                    Har du allerede konto? 
+                    <a href="#" onclick="switchAuthMode('login')">Logg inn her</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
