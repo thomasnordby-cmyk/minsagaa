@@ -3,104 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min profil – Min Saga</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <title>Min Saga – Samleside for din digitale arv</title>
+    <link rel="stylesheet" href="trust-dashboard.css">
 </head>
-<body class="dashboard-body">
-    <header class="dashboard-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Min Saga</div>
-                <div class="user-menu">
-                    <span class="user-name" id="userName"></span>
-                    <button class="logout-btn" onclick="logout()">Logg ut</button>
+<body>
+    <!-- Trust Banner -->
+    <div class="trust-banner">
+        <div class="trust-content">
+            <span class="trust-icon">🔐</span>
+            <span class="trust-text">
+                <strong>Viktig å vite:</strong> Min Saga er ikke en bank. Vi ber aldri om passord, kortnummer eller BankID. 
+                Vi kan ikke se dokumentene du laster opp – de er kryptert før lagring.
+            </span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand">
+                <h1 class="brand-name">Min Saga</h1>
+                <p class="brand-tagline">Et trygt sted for din digitale arv</p>
+            </div>
+            <div class="user-area">
+                <div class="user-info">
+                    <span class="greeting">Hei, <span id="userName">...</span></span>
+                    <span class="user-subtitle">Ta den tiden du trenger</span>
                 </div>
+                <button class="btn-logout" onclick="logout()">Logg ut</button>
             </div>
         </div>
     </header>
 
-    <div class="dashboard-container">
-        <aside class="sidebar">
-            <nav class="sidebar-nav">
-                <h3>Oversikt</h3>
-                <a href="#" class="nav-item special" data-section="min-saga">
-                    <span class="nav-icon">✨</span>
-                    <span>Min Saga</span>
-                </a>
-                <a href="#" class="nav-item" data-section="min-bruker">
-                    <span class="nav-icon">👤</span>
-                    <span>Min bruker</span>
-                </a>
+    <!-- Main Container -->
+    <div class="page-container">
+        
+        <!-- Welcome/Info Panel -->
+        <aside class="info-panel">
+            <div class="info-card">
+                <h2>Hva er Min Saga?</h2>
+                <p>Min Saga er et trygt sted hvor du kan samle viktig informasjon for dine kjære.</p>
+                <p>Vi er <strong>ikke</strong> en bank, forsikringsselskap eller offentlig myndighet.</p>
+                <p>Alt du laster opp krypteres, og kun du (og de du gir tilgang) kan se det.</p>
+            </div>
 
-                <h3>Praktisk</h3>
-                <a href="#" class="nav-item" data-section="kontakter">
-                    <span class="nav-icon">👥</span>
-                    <span>Kontakter</span>
-                </a>
-                <a href="#" class="nav-item" data-section="abonnementer">
-                    <span class="nav-icon">📱</span>
-                    <span>Abonnementer</span>
-                </a>
-                <a href="#" class="nav-item" data-section="krypto">
-                    <span class="nav-icon">₿</span>
-                    <span>Kryptovaluta</span>
-                </a>
-                <a href="#" class="nav-item" data-section="forsikringer">
-                    <span class="nav-icon">🛡️</span>
-                    <span>Forsikringer</span>
-                </a>
-                <a href="#" class="nav-item" data-section="bank">
-                    <span class="nav-icon">🏦</span>
-                    <span>Bank & økonomi</span>
-                </a>
-                <a href="#" class="nav-item" data-section="eiendommer">
-                    <span class="nav-icon">🏠</span>
-                    <span>Eiendommer</span>
-                </a>
-                <a href="#" class="nav-item" data-section="kjoretoy">
-                    <span class="nav-icon">🚗</span>
-                    <span>Kjøretøy</span>
-                </a>
-                <a href="#" class="nav-item" data-section="digitalt">
-                    <span class="nav-icon">💻</span>
-                    <span>Digitalt liv</span>
-                </a>
-                <a href="#" class="nav-item" data-section="dokumenter">
-                    <span class="nav-icon">📄</span>
-                    <span>Dokumenter</span>
-                </a>
+            <div class="info-card">
+                <h3>Du bestemmer</h3>
+                <ul class="simple-list">
+                    <li>✓ Hva du vil dele</li>
+                    <li>✓ Hvem som får tilgang</li>
+                    <li>✓ Når de får tilgang</li>
+                </ul>
+            </div>
 
-                <h3>Personlig</h3>
-                <a href="#" class="nav-item special" data-section="minner">
-                    <span class="nav-icon">💝</span>
-                    <span>Minner & Saga</span>
-                </a>
-                <a href="#" class="nav-item special" data-section="livsmanual">
-                    <span class="nav-icon">📖</span>
-                    <span>Livsmanualen</span>
-                </a>
-                <a href="#" class="nav-item special" data-section="etterlatte">
-                    <span class="nav-icon">🔐</span>
-                    <span>Etterlatteprofiler</span>
-                </a>
+            <div class="info-card trust-card">
+                <h3>Vi ber ALDRI om:</h3>
+                <ul class="trust-list">
+                    <li>❌ Passord til andre tjenester</li>
+                    <li>❌ Kortnummer eller BankID</li>
+                    <li>❌ Personlig økonomi-info</li>
+                </ul>
+                <p class="small-text">Hvis noen utgir seg for å være Min Saga og ber om dette, er det svindel.</p>
+            </div>
 
-                <h3>Sikkerhet</h3>
-                <a href="#" class="nav-item" data-section="aktivering">
-                    <span class="nav-icon">⏳</span>
-                    <span>Aktivering</span>
-                </a>
-            </nav>
+            <div class="info-card contact-card">
+                <h3>Kontakt oss</h3>
+                <p><strong>E-post:</strong> kontakt@minsaga.no</p>
+                <p><strong>Telefon:</strong> +47 XX XX XX XX</p>
+                <p class="small-text">Reelle mennesker som kan hjelpe deg</p>
+            </div>
         </aside>
 
-        <main class="main-content" id="mainContent">
-            <!-- Content loaded dynamically -->
+        <!-- Main Content -->
+        <main class="content-main">
+            
+            <!-- Category Navigation -->
+            <nav class="category-nav">
+                <h2 class="nav-title">Dine kategorier</h2>
+                <p class="nav-subtitle">Velg hva du vil organisere i dag</p>
+
+                <div class="category-grid">
+                    <!-- Forsikringer -->
+                    <button class="category-card" onclick="openCategory('forsikringer')">
+                        <span class="cat-icon">🛡️</span>
+                        <div class="cat-content">
+                            <h3>Forsikringer</h3>
+                            <p class="cat-desc">Poliser og dokumentasjon</p>
+                            <p class="cat-why">Slik at dine etterlatte vet hvilke forsikringer som finnes</p>
+                            <span class="cat-count" id="count-forsikringer">0 dokumenter</span>
+                        </div>
+                    </button>
+
+                    <!-- Økonomisk oversikt -->
+                    <button class="category-card" onclick="openCategory('okonomi')">
+                        <span class="cat-icon">🏦</span>
+                        <div class="cat-content">
+                            <h3>Økonomisk oversikt</h3>
+                            <p class="cat-desc">Bankinfo og avtaler</p>
+                            <p class="cat-why">For familiens oversikt – ikke for oss å se</p>
+                            <span class="cat-count" id="count-okonomi">0 dokumenter</span>
+                        </div>
+                    </button>
+
+                    <!-- Eiendommer -->
+                    <button class="category-card" onclick="openCategory('eiendommer')">
+                        <span class="cat-icon">🏠</span>
+                        <div class="cat-content">
+                            <h3>Eiendommer</h3>
+                            <p class="cat-desc">Hus, hytte, eiendomspapirer</p>
+                            <p class="cat-why">Skjøter, takster og viktig dokumentasjon</p>
+                            <span class="cat-count" id="count-eiendommer">0 dokumenter</span>
+                        </div>
+                    </button>
+
+                    <!-- Digitale kontoer -->
+                    <button class="category-card" onclick="openCategory('digitalt')">
+                        <span class="cat-icon">💻</span>
+                        <div class="cat-content">
+                            <h3>Mine digitale kontoer</h3>
+                            <p class="cat-desc">Oversikt for etterlatte</p>
+                            <p class="cat-why">Hvilke kontoer finnes, og hvordan lukke dem</p>
+                            <span class="cat-count" id="count-digitalt">0 notater</span>
+                        </div>
+                    </button>
+
+                    <!-- Dokumenter -->
+                    <button class="category-card" onclick="openCategory('dokumenter')">
+                        <span class="cat-icon">📄</span>
+                        <div class="cat-content">
+                            <h3>Viktige dokumenter</h3>
+                            <p class="cat-desc">Testament, fullmakter, attester</p>
+                            <p class="cat-why">Samlet på ett sted når familien trenger det</p>
+                            <span class="cat-count" id="count-dokumenter">0 dokumenter</span>
+                        </div>
+                    </button>
+
+                    <!-- Minner -->
+                    <button class="category-card special" onclick="openCategory('minner')">
+                        <span class="cat-icon">💝</span>
+                        <div class="cat-content">
+                            <h3>Minner & personlige budskap</h3>
+                            <p class="cat-desc">Bilder, video og brev</p>
+                            <p class="cat-why">Det du vil at de skal huske deg for</p>
+                            <span class="cat-count" id="count-minner">0 minner</span>
+                        </div>
+                    </button>
+
+                    <!-- Livsmanualen -->
+                    <button class="category-card special" onclick="openCategory('livsmanual')">
+                        <span class="cat-icon">📖</span>
+                        <div class="cat-content">
+                            <h3>Livsmanualen</h3>
+                            <p class="cat-desc">Praktisk info om hverdagen</p>
+                            <p class="cat-why">Hvor tingene er, hvordan ting fungerer</p>
+                            <span class="cat-count" id="count-livsmanual">Ufullstendig</span>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Content Area (Hidden until category is opened) -->
+            <div class="category-content" id="categoryContent" style="display: none;">
+                <!-- Dynamic content loads here -->
+            </div>
+
         </main>
     </div>
 
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Min Saga</h4>
+                <p>Et trygt sted for din digitale arv.</p>
+                <p>Vi er ikke en bank, forsikring eller myndighet.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>kontakt@minsaga.no</p>
+                <p>+47 XX XX XX XX</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sikkerhet</h4>
+                <p>Ende-til-ende kryptert</p>
+                <p>Vi kan ikke lese dine data</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Min Saga | Utviklet med omsorg i Norge 🇳🇴</p>
+        </div>
+    </footer>
+
     <script src="auth.js"></script>
     <script src="storage.js"></script>
-    <script src="dashboard.js"></script>
-    <script src="dashboard-special.js"></script>
+    <script src="trust-app.js"></script>
+    <script src="trust-app-categories.js"></script>
 </body>
 </html>
